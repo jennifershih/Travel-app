@@ -1,0 +1,42 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.row-layout {
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  height: 8%;
+  min-width: 50px;
+  min-height: 50px;
+  flex-shrink: 0;
+  background-color: var(--igx-grays-100);
+  border-color: var(--igx-grays-200);
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  align-items: center;
+}
+.row-layout_1 {
+  width: max-content;
+  position: relative;
+  align-items: center;
+}
+.image {
+  margin: 0 32px;
+  width: 130px;
+  height: 35px;
+  min-width: 0;
+  min-height: 0;
+  flex-shrink: 0;
+  object-fit: scale-down;
+}
+.views-container {
+  position: relative;
+  width: 100%;
+  height: 92%;
+}
+.row {
+  display: flex;
+}
