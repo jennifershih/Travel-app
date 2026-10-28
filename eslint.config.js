@@ -48,5 +48,12 @@ module.exports = defineConfig([
       angular.configs.templateAccessibility,
     ],
     rules: {},
-  }
+  },
+  {
+    files: ["**/*.html"],
+    rules: {
+      // Ignite UI puts <label igxLabel> inside its own input components.
+      "@angular-eslint/template/label-has-associated-control": "off",
+    },
+  },
 ]);
