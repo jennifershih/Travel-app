@@ -7,7 +7,7 @@
 .column-layout {
   width: 75%;
   min-width: 50%;
-  background-color: var(--igx-grays-200);
+  background-color: var(--ig-gray-200);
   height: 100%;
   align-items: center;
   overflow: auto;
@@ -55,7 +55,7 @@
   flex-grow: 1;
   flex-basis: 0;
   width: 100%;
-  background-color: var(--igx-grays-100);
+  background-color: var(--ig-gray-100);
   position: sticky;
   z-index: 1;
   overflow: auto;
@@ -65,7 +65,7 @@
 .column-layout_5 {
   margin: -32px 0 24px;
   width: 96%;
-  background-color: var(--igx-surface-500);
+  background-color: var(--ig-surface-500);
   position: sticky;
   height: max-content;
   z-index: 1;
@@ -78,7 +78,7 @@
 .column-layout_6 {
   margin: 0 0 24px;
   width: 96%;
-  background-color: var(--igx-surface-500);
+  background-color: var(--ig-surface-500);
   position: sticky;
   height: max-content;
   z-index: 1;
@@ -114,7 +114,7 @@
 .column-layout_8 {
   padding: 16px;
   margin: 0 0 0 8px;
-  background-color: var(--igx-grays-100);
+  background-color: var(--ig-gray-100);
   justify-content: center;
   height: 100%;
   position: relative;
@@ -123,7 +123,7 @@
 }
 .column-layout_9 {
   width: 96%;
-  background-color: var(--igx-surface-500);
+  background-color: var(--ig-surface-500);
   position: sticky;
   height: max-content;
   z-index: 1;
@@ -167,14 +167,14 @@
 }
 .title {
   margin: 0 0 8px;
-  color: var(--igx-surface-500);
+  color: var(--ig-surface-500);
   height: max-content;
   min-width: min-content;
   white-space: pre-wrap;
 }
 .title_1 {
   width: 580px;
-  color: var(--igx-surface-500);
+  color: var(--ig-surface-500);
   height: max-content;
   min-width: min-content;
   white-space: pre-wrap;

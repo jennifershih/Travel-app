@@ -1,18 +1,47 @@
 <div class="row-layout row">
   <div class="row-layout_2 row">
-    <button igxButton="icon" type="icon" [disabled]="false" [igxToggleAction]="navigationDrawer" class="icon-button">
+    <button
+      igxIconButton="flat"
+      type="icon"
+      [disabled]="false"
+      [igxToggleAction]="navigationDrawer"
+      class="icon-button"
+    >
       <igx-icon>menu</igx-icon>
     </button>
-    <img src="https://i.ibb.co/syrwz7h/travel-app.png" routerLink="/home/login" class="image" />
+    <img
+      alt=""
+      src="https://i.ibb.co/syrwz7h/travel-app.png"
+      routerLink="/home/login"
+      class="image"
+    />
   </div>
   <div class="row-layout_1 row">
-    <button igxButton="icon" igxButtonColor="var(--igx-surface-500)" type="icon" [disabled]="false" class="icon-button_1">
+    <button
+      igxIconButton="flat"
+      style.--foreground="var(--igx-surface-500)"
+      type="icon"
+      [disabled]="false"
+      class="icon-button_1"
+    >
       <igx-icon>notifications</igx-icon>
     </button>
-    <igx-avatar src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&crop=faces&w=240&h=240&q=80" [roundShape]="true" size="small"></igx-avatar>
+    <igx-avatar
+      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&crop=faces&w=240&h=240&q=80"
+      shape="circle"
+      size="small"
+    ></igx-avatar>
   </div>
 </div>
-<igx-nav-drawer width="320px" [pinThreshold]="0" [pin]="false" position="left" [isOpen]="false" #navigationDrawer class="navigation-drawer">
+<igx-nav-drawer
+  width="320px"
+  [pinThreshold]="0"
+  [pin]="false"
+  position="left"
+  [isOpen]="false"
+  #navigationDrawer
+  class="navigation-drawer"
+>
   <ng-template igxDrawer>
     <span [isHeader]="false" igxDrawerItem routerLink="/in-app/dashboard">
       <igx-icon font="material" [active]="true">dashboard</igx-icon>

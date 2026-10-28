@@ -3,39 +3,73 @@
     <div class="column-layout_3 column">
       <div class="column-layout_1 column">
         <h4 class="title">Hi, Sarah!</h4>
-        <p class="igx-typography__subtitle-1 title_1">We have some great suggestions for your next travel! We've searched the whole web to provide you with these rare findings - special for you!</p>
+        <p class="ig-typography__subtitle-1 title_1">
+          We have some great suggestions for your next travel! We've searched
+          the whole web to provide you with these rare findings - special for
+          you!
+        </p>
       </div>
     </div>
     <div class="column-layout_5 column">
       <div class="row-layout_3 row">
         <h6 class="title_2">Latest in articles</h6>
-        <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" routerLink="/in-app/articles" class="button">
+        <button
+          igxButton="outlined"
+          style.--foreground="var(--igx-grays-900)"
+          [disabled]="false"
+          routerLink="/in-app/articles"
+          class="button"
+        >
           <span>view all ARTICLES</span>
         </button>
       </div>
       <div class="row-layout_4 row-layout_5 row">
-        <igx-card type="outlined" *ngFor="let item of travelAppSelectedArticles" class="card">
-          <igx-card-media height="120px">
-            <img [src]="item.image_url" />
-          </igx-card-media>
-          <igx-card-header>
-            <h3 igxCardHeaderTitle>{{ item.title }}</h3>
-            <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
-          </igx-card-header>
-          <igx-card-actions [reverse]="true" class="actions">
-            <button igxButton="icon" type="icon" [disabled]="false">
-              <igx-icon>bookmark_border</igx-icon>
-            </button>
-            <button igxButton="icon" type="icon" [disabled]="false">
-              <igx-icon>share</igx-icon>
-            </button>
-            <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button_1">
-              <span>read</span>
-            </button>
-          </igx-card-actions>
-        </igx-card>
+        @for (item of travelAppSelectedArticles; track item) {
+          <igx-card class="card">
+            <igx-card-media height="120px">
+              <img alt="" [src]="item.image_url" />
+            </igx-card-media>
+            <igx-card-header>
+              <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+              <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+            </igx-card-header>
+            <igx-card-actions class="actions">
+              <button
+                igxIconButton="flat"
+                type="icon"
+                [disabled]="false"
+                igxEnd
+              >
+                <igx-icon>bookmark_border</igx-icon>
+              </button>
+              <button
+                igxIconButton="flat"
+                type="icon"
+                [disabled]="false"
+                igxEnd
+              >
+                <igx-icon>share</igx-icon>
+              </button>
+              <button
+                igxButton="outlined"
+                style.--foreground="var(--igx-grays-900)"
+                [disabled]="false"
+                class="button_1"
+                igxStart
+              >
+                <span>read</span>
+              </button>
+            </igx-card-actions>
+          </igx-card>
+        }
         <div class="column-layout_8 column">
-          <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" routerLink="/in-app/articles" class="button_1">
+          <button
+            igxButton="outlined"
+            style.--foreground="var(--igx-grays-900)"
+            [disabled]="false"
+            routerLink="/in-app/articles"
+            class="button_1"
+          >
             <span>VIEW ALL</span>
           </button>
         </div>
@@ -44,33 +78,60 @@
     <div class="column-layout_6 column">
       <div class="row-layout_3 row-layout_5 row">
         <h6 class="title_2">Destinations</h6>
-        <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+        <button
+          igxButton="outlined"
+          style.--foreground="var(--igx-grays-900)"
+          [disabled]="false"
+          class="button"
+        >
           <span>VIEW ALL DESTINATIONS</span>
         </button>
       </div>
       <div class="row-layout_4 row-layout_5 row">
-        <igx-card type="outlined" *ngFor="let item of travelAppDestinations" class="card">
-          <igx-card-media height="120px">
-            <img [src]="item.image_url" />
-          </igx-card-media>
-          <igx-card-header>
-            <h3 igxCardHeaderTitle>{{ item.title }}</h3>
-            <h5 igxCardHeaderSubtitle> </h5>
-          </igx-card-header>
-          <igx-card-actions [reverse]="true" class="actions">
-            <button igxButton="icon" type="icon" [disabled]="false">
-              <igx-icon>bookmark_border</igx-icon>
-            </button>
-            <button igxButton="icon" type="icon" [disabled]="false">
-              <igx-icon>share</igx-icon>
-            </button>
-            <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button_1">
-              <span>view</span>
-            </button>
-          </igx-card-actions>
-        </igx-card>
+        @for (item of travelAppDestinations; track item) {
+          <igx-card class="card">
+            <igx-card-media height="120px">
+              <img alt="" [src]="item.image_url" />
+            </igx-card-media>
+            <igx-card-header>
+              <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+            </igx-card-header>
+            <igx-card-actions class="actions">
+              <button
+                igxIconButton="flat"
+                type="icon"
+                [disabled]="false"
+                igxEnd
+              >
+                <igx-icon>bookmark_border</igx-icon>
+              </button>
+              <button
+                igxIconButton="flat"
+                type="icon"
+                [disabled]="false"
+                igxEnd
+              >
+                <igx-icon>share</igx-icon>
+              </button>
+              <button
+                igxButton="outlined"
+                style.--foreground="var(--igx-grays-900)"
+                [disabled]="false"
+                class="button_1"
+                igxStart
+              >
+                <span>view</span>
+              </button>
+            </igx-card-actions>
+          </igx-card>
+        }
         <div class="column-layout_8 column">
-          <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button_1">
+          <button
+            igxButton="outlined"
+            style.--foreground="var(--igx-grays-900)"
+            [disabled]="false"
+            class="button_1"
+          >
             <span>discover more</span>
           </button>
         </div>
@@ -79,22 +140,97 @@
     <div class="column-layout_9 column">
       <div class="row-layout_3 row-layout_5 row">
         <h6 class="title_2">My travel lists</h6>
-        <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+        <button
+          igxButton="outlined"
+          style.--foreground="var(--igx-grays-900)"
+          [disabled]="false"
+          class="button"
+        >
           <span>VIEW ALL LISTS</span>
         </button>
       </div>
       <div class="row-layout_4 row">
-        <igx-grid [data]="northwindProducts" [allowFiltering]="true" filterMode="excelStyleFilter" [autoGenerate]="false" width="100%" height="200px" displayDensity="cosy" primaryKey class="grid">
-          <igx-column field="productID" header="productID" title="productID" dataType="number" [sortable]="true"></igx-column>
-          <igx-column field="supplierID" header="supplierID" title="supplierID" dataType="number" [sortable]="true"></igx-column>
-          <igx-column field="categoryID" header="categoryID" title="categoryID" dataType="number" [sortable]="true"></igx-column>
-          <igx-column field="quantityPerUnit" header="quantityPerUnit" title="quantityPerUnit" dataType="string" [sortable]="true"></igx-column>
-          <igx-column field="unitPrice" header="unitPrice" title="unitPrice" dataType="number" [sortable]="true"></igx-column>
-          <igx-column field="unitsInStock" header="unitsInStock" title="unitsInStock" dataType="number" [sortable]="true"></igx-column>
-          <igx-column field="unitsOnOrder" header="unitsOnOrder" title="unitsOnOrder" dataType="number" [sortable]="true"></igx-column>
-          <igx-column field="reorderLevel" header="reorderLevel" title="reorderLevel" dataType="number" [sortable]="true"></igx-column>
-          <igx-column field="discontinued" header="discontinued" title="discontinued" dataType="boolean" [sortable]="true"></igx-column>
-          <igx-column field="name" header="name" title="name" dataType="string" [sortable]="true"></igx-column>
+        <igx-grid
+          [data]="northwindProducts"
+          [allowFiltering]="true"
+          filterMode="excelStyleFilter"
+          [autoGenerate]="false"
+          width="100%"
+          height="200px"
+          primaryKey
+          class="grid"
+          [style.--ig-size]="'var(--ig-size-medium)'"
+        >
+          <igx-column
+            field="productID"
+            header="productID"
+            title="productID"
+            dataType="number"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="supplierID"
+            header="supplierID"
+            title="supplierID"
+            dataType="number"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="categoryID"
+            header="categoryID"
+            title="categoryID"
+            dataType="number"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="quantityPerUnit"
+            header="quantityPerUnit"
+            title="quantityPerUnit"
+            dataType="string"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="unitPrice"
+            header="unitPrice"
+            title="unitPrice"
+            dataType="number"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="unitsInStock"
+            header="unitsInStock"
+            title="unitsInStock"
+            dataType="number"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="unitsOnOrder"
+            header="unitsOnOrder"
+            title="unitsOnOrder"
+            dataType="number"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="reorderLevel"
+            header="reorderLevel"
+            title="reorderLevel"
+            dataType="number"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="discontinued"
+            header="discontinued"
+            title="discontinued"
+            dataType="boolean"
+            [sortable]="true"
+          ></igx-column>
+          <igx-column
+            field="name"
+            header="name"
+            title="name"
+            dataType="string"
+            [sortable]="true"
+          ></igx-column>
         </igx-grid>
       </div>
     </div>
@@ -102,7 +238,12 @@
   <div class="column-layout_2 column">
     <div class="row-layout_1 row">
       <h6 class="title_2">Photos</h6>
-      <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+      <button
+        igxButton="outlined"
+        style.--foreground="var(--igx-grays-900)"
+        [disabled]="false"
+        class="button"
+      >
         <span>GO TO ALBUM</span>
       </button>
     </div>
@@ -110,10 +251,14 @@
       <div class="column-layout_10 column">
         <div class="row-layout_2 row">
           <div class="column-layout_7 column">
-            <img [src]="item.image_url" *ngFor="let item of travelAppImageSet1" class="image" />
+            @for (item of travelAppImageSet1; track item) {
+              <img alt="" [src]="item.image_url" class="image" />
+            }
           </div>
           <div class="column-layout_7 column">
-            <img [src]="item1.image_url" *ngFor="let item1 of travelAppImageSet2" class="image" />
+            @for (item1 of travelAppImageSet2; track item1) {
+              <img alt="" [src]="item1.image_url" class="image" />
+            }
           </div>
         </div>
       </div>

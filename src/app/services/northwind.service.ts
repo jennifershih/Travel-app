@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { Northwind } from './northwind';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NorthwindService {
   public getData(tableName: string): Observable<any[]> {

@@ -6,7 +6,7 @@
 }
 .column-layout {
   position: sticky;
-  background-color: var(--igx-grays-100);
+  background-color: var(--ig-gray-100);
   z-index: 1;
   padding: 24px;
   width: 100%;
@@ -44,7 +44,7 @@
   min-width: 50px;
 }
 .column-layout_2 {
-  background-color: var(--igx-grays-200);
+  background-color: var(--ig-gray-200);
   flex-grow: 1;
   flex-basis: 0;
   padding: 24px;

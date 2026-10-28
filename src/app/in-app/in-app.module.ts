@@ -4,16 +4,21 @@ import { CommonModule } from '@angular/common';
 import { InAppRoutingModule } from './in-app-routing.module';
 import { InAppComponent } from './in-app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { IgxButtonModule, IgxCardModule, IgxIconModule, IgxGridModule, IgxActionStripModule, IgxToggleModule, IgxAvatarModule, IgxNavigationDrawerModule } from 'igniteui-angular';
+import {
+  IgxButtonModule,
+  IgxCardModule,
+  IgxIconModule,
+  IgxGridModule,
+  IgxActionStripModule,
+  IgxToggleModule,
+  IgxAvatarModule,
+  IgxNavigationDrawerModule,
+} from 'igniteui-angular';
 import { FormsModule } from '@angular/forms';
 import { ArticlesComponent } from './articles/articles.component';
 
 @NgModule({
-  declarations: [
-    InAppComponent,
-    DashboardComponent,
-    ArticlesComponent
-  ],
+  declarations: [InAppComponent, DashboardComponent, ArticlesComponent],
   imports: [
     CommonModule,
     InAppRoutingModule,
@@ -25,8 +30,7 @@ import { ArticlesComponent } from './articles/articles.component';
     FormsModule,
     IgxToggleModule,
     IgxAvatarModule,
-    IgxNavigationDrawerModule
-  ]
+    IgxNavigationDrawerModule,
+  ],
 })
-export class InAppModule {
-}
+export class InAppModule {}

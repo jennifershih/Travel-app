@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-set-new-password',
   templateUrl: './set-new-password.component.html',
-  styleUrls: ['./set-new-password.component.scss']
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrls: ['./set-new-password.component.scss'],
 })
-export class SetNewPasswordComponent {
-}
+export class SetNewPasswordComponent {}
